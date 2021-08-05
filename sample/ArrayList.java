@@ -12,9 +12,11 @@ public class ArrayList {
 		array[2][1] = 21; 
 		for(int i = 0; i < array.length - 1; i++) {
 			for(int j = i + 1; j < array.length; j++) {
-				ArrayList arrayList = new ArrayList(array[i]);
-				ArrayList arrayList2 = new ArrayList(array[j]);
-				if (array[i][0] + array[i][1] + array[i][2] + array[i][3] + array[i][4] > array[j][0] + array[j][1] + array[j][2] + array[j][3] + array[j][4]) {
+				ArrayList arrayList = new ArrayList();
+				int arraySum = arrayList.arraySum(array[i]);
+				ArrayList nextArrayList = new ArrayList();
+				int nextArraySum = nextArrayList.arraySum(array[j]);
+				if (arraySum > nextArraySum) {
 					int[] swap = array[i];
 					array[i] = array[j];
 					array[j] = swap;
@@ -22,12 +24,16 @@ public class ArrayList {
 			}
 		}
 		for(int k = 0; k < array.length; k++) {
-			System.out.println(String.format("(%3d)[%d][%d][%d][%d][%d]", (array[k][0] + array[k][1] + array[k][2] + array[k][3] + array[k][4]), array[k][0], array[k][1], array[k][2], array[k][3], array[k][4]));
+			ArrayList subList = new ArrayList();
+			int subTotal = subList.arraySum(array[k]);
+			System.out.println(String.format("(%3d)[%d][%d][%d][%d][%d]", subTotal, array[k][0], array[k][1], array[k][2], array[k][3], array[k][4]));
 		}
 	}
 	private int arraySum(int[] array) {
-		
-		int arraySum = array[i][0] + array[i][1] + array[i][2] + array[i][3] + array[i][4];
-		
+		int arraySum = 0;
+		for (int i = 0; i < array.length; i++) {
+			arraySum += array[i];
+		}
+		return arraySum;
 	}
 }
