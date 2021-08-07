@@ -3,6 +3,7 @@ package sample;
 public class Hero {
 	String name;
 	int hp;
+	Sword sword;
 	
 	public void sleep() {
 		this.hp = 100;
@@ -21,5 +22,9 @@ public class Hero {
 	
 	public void run() {
 		System.out.println(this.name + "は、転んだ！\nGAEOVER\n最終HPは" + this.hp + "でした");
+	}
+	
+	public void kougeki() {
+		System.out.println(this.name + "は" + this.sword.name + "で攻撃した！");
 	}
 }
