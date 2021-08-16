@@ -41,5 +41,6 @@ public class Hero {
 	
 	public Hero() {
 		this("ダミー");
+		System.out.println("Heroのコンストラクタが動作");
 	}
 }

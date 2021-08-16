@@ -30,9 +30,6 @@ public class Main {
 		m2.hp = 48;
 		m2.suffix = 'B';
 		
-		Hero h3 = new Hero();
-		h3.run();
 		SuperHero sh = new SuperHero();
-		sh.run();
 	}
 }
