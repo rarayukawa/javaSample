@@ -24,6 +24,12 @@ public class Hero {
 		System.out.println(this.name + "は、転んだ！\nGAEOVER\n最終HPは" + this.hp + "でした");
 	}
 	
+	public void attack(Matango m) {
+		System.out.println(this.name + "の攻撃！");
+		m.hp -= 5;
+		System.out.println("５ポイントのダメージを与えた！");
+	}
+	
 	public void kougeki() {
 		System.out.println(this.name + "は" + this.sword.name + "で攻撃した！");
 	}
