@@ -22,17 +22,12 @@ public class Main {
 		System.out.println("現在の武器は" + h1.sword.name);
 		h1.kougeki();
 		
-		Matango m1 = new Matango();
+		Matango m1 = new Matango('a');
 		m1.hp = 50;
 		m1.suffix = 'A';
 		
-		Matango m2 = new Matango();
+		Matango m2 = new Matango('s');
 		m2.hp = 48;
 		m2.suffix = 'B';
-		
-		h1.slip();
-		m1.run();
-		m2.run();
-		h1.run();
 	}
 }

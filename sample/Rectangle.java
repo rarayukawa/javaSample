@@ -4,6 +4,7 @@ public class Rectangle {
 	static int counter = 0;
 	int width;
 	int height;
+	
 	static int getCounter() {
 		return counter;
 	}
