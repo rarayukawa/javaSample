@@ -1,5 +1,7 @@
 package sample;
 
-public class Weapon {
-
+public class Weapon extends Item {
+	public Weapon() {
+		super("名無しの剣");
+	}
 }
