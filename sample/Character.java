@@ -1,8 +1,12 @@
 package sample;
 
-public class Character {
+public abstract class Character {
 	int hp;
 	String name;
-	public void attack(Matango m);
 	
+	public void run() {
+		System.out.println(this.name + "は逃げ出した");
+	}
+	
+	public abstract void attack(Matango m);
 }
