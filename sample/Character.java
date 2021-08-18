@@ -1,6 +1,6 @@
 package sample;
 
-public abstract class Character {
+public abstract class Character implements Life{
 	int hp;
 	String name;
 	
