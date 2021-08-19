@@ -6,6 +6,34 @@ public class Wizard extends Character {
 	private String name;
 	private Wand wand;
 	
+	public void setHp(int hp) {
+		if(hp < 0) {
+			throw new IllegalArgumentException("０以上にしてください");
+		} else {
+			this.hp = hp;
+		}
+	}
+	
+	public void setMp(int mp) {
+		if(mp < 0) {
+			throw new IllegalArgumentException("0以上にしてください");
+		}
+		this.mp = mp;
+	}
+	
+	public Wand getWand() {
+		return this.wand;
+	}
+	
+	public void setWand(Wand wand) {
+		if (wand == null) {
+			throw new IllegalArgumentException("以上な値です");
+		}
+		this.wand = wand;
+	}
+	
+	
+	
 	public void heal(Hero h) {
 		int basePoint = 10;
 		int recoverPoint = (int)(basePoint * this.wand.getPower());
