@@ -1,9 +1,13 @@
 package sample;
 
 public class Hero {
-	String name;
+	private String name;
 	private int hp;
 	Sword sword;
+	
+	public String getName() {
+		return this.name;
+	}
 	
 	public void sleep() {
 		this.hp = 100;
