@@ -2,7 +2,7 @@ package sample;
 
 public class Hero {
 	String name;
-	int hp;
+	private int hp;
 	Sword sword;
 	
 	public void sleep() {
@@ -24,10 +24,21 @@ public class Hero {
 		System.out.println(this.name + "は、転んだ！\nGAEOVER\n最終HPは" + this.hp + "でした");
 	}
 	
+	public void die() {
+		System.out.println(this.name + "は死んでしまった\nGAMEOVER");
+		
+	}
+	
 	public void attack(Matango m) {
 		System.out.println(this.name + "の攻撃！");
 		m.hp -= 5;
 		System.out.println("５ポイントのダメージを与えた！");
+		
+		System.out.println("お化けキノコ" + m.suffix + "から２ポイントの反撃を受けた");
+		this.hp -= 2;
+		if (this.hp <= 0) {
+			this.die();
+		}
 	}
 	
 	public void kougeki() {
