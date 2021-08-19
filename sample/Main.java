@@ -15,11 +15,9 @@ public class Main {
 		s3.name = "炎の剣";
 		s3.damage = 10;
 		Hero h1 = new Hero();
-		h1.name = "ミナト";
 		h1.sword = s3;
 		
 		Hero h2 = new Hero();
-		h2.name = "アサカ";
 		Wizard w = new Wizard();
 		w.name = "スガワラ";
 		w.hp = 50;
