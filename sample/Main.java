@@ -19,8 +19,6 @@ public class Main {
 		
 		Hero h2 = new Hero();
 		Wizard w = new Wizard();
-		w.name = "スガワラ";
-		w.hp = 50;
 		System.out.println("現在の武器は" + h1.sword.name);
 		h1.kougeki();
 		
@@ -33,5 +31,9 @@ public class Main {
 		m2.suffix = 'B';
 		
 		SuperHero sh = new SuperHero();
+		
+		Empty e = new Empty();
+		String s = e.tiString();
+		System.out.println(s);
 	}
 }
