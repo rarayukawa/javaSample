@@ -71,7 +71,8 @@ public class Hero {
 		System.out.println("Heroのコンストラクタが動作");
 	}
 	
+	@Override
 	public String toString() {
-		return "名前":" + this.name + "/HP:" + this.hp;
+		return "名前:" + this.name + "/HP:" + this.hp;
 	}
 }
