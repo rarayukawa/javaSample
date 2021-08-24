@@ -25,7 +25,7 @@ public class ErrorExecutor {
 			try {
 				System.out.println(errorExecutor.messageConvert(argument));
 			} catch (OriginalException e) {
-				System.out.println(e);
+				System.out.println();
 			}
 		}
 	}
