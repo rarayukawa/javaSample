@@ -2,7 +2,7 @@ package sample;
 
 public class Hero {
 	private String name;
-	private int hp;
+	int hp;
 	Sword sword;
 	
 	public String getName() {
