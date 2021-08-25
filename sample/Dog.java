@@ -1,38 +1,18 @@
 package sample;
 
-public class Dog {
-	private static int counter;
-	private String name;
-	private int cryCount;
-	
+public class Dog extends Animal{
 	public Dog(String name) {
-		this(name, 1);
+		super(name);
 	}
-	
-	public Dog(String name, int cryCount) {
-		this.setName(name);
-		this.setCryCount(cryCount);
+
+	@Override
+	public void speak() {
+		System.out.println("私の名前は" + name + "だわん！！");
+	}
+
+	@Override
+	public void eat() {
+		System.out.println("ガブガブがぶ");
 		
-		Dog.counter++;
-		System.out.println(Dog.counter + "個目のインスタンスが生成されました");
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	public void setCryCount(int cryCount) {
-		this.cryCount = cryCount;
-	}
-	
-	public void cry() {
-		System.out.print(this.name + "「");
-		for(int i = 0; i < this.cryCount; i++) {
-			System.out.print("ワン");
-		}
-		System.out.println("」");
-	}
-	
-	public void sitDown() {
-		System.out.println(this.name + "は座りました");
 	}
 }
