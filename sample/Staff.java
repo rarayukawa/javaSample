@@ -11,4 +11,6 @@ public class Staff {
 		System.out.println("****クレジット対応****");
 		credit.bill();
 	}
+	
+	
 }
