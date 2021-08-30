@@ -1,11 +1,14 @@
 package sample;
 
 public class Test {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		Chara boy = new Chara("少年");
 		Chara girl = new Chara("少女");
 		boy.start();
 		girl.start();
+		boy.join();
+		girl.join();
+		System.out.println("終了");
 	}
 }
 
@@ -20,12 +23,9 @@ class Chara extends Thread {
 }
 
 class Battle {
-	static Object lock = new Object();
-	static void process(Chara ch) {
-		synchronized(lock) {
-			for(int i = 0; i < 5; i++) {
-				System.out.println(ch.name + "は攻撃しました");
-			}
+	synchronized static void process(Chara ch) {
+		for(int i = 0; i < 5; i++) {
+			System.out.println(ch.name + "は戦闘中です");
 		}
 	}
 }
