@@ -8,5 +8,9 @@ public class ThreadExecutor {
 		t1.start();
 		t2.start();
 		t3.start();
+		
+		RunnnableSample r = new RunnnableSample();
+		Thread t = new Thread(r);
+		t.start();
 	}
 }
