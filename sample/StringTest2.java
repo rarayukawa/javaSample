@@ -21,6 +21,8 @@ public class StringTest2 {
 		for(String w : words) {
 			System.out.print(w + "->");
 		}
+		String w1 = s5.replaceAll("[beh]", "X");
+		System.out.println(w1);
 	}
 	
 	public boolean isValidPlayerName(String name) {
