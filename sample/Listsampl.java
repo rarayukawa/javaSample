@@ -10,5 +10,10 @@ public class Listsampl {
 		for(int i : points) {
 			System.out.println(i);
 		}
+		ArrayList c = new ArrayList();
+		c.add("hoge");
+		c.add("foo");
+		c.add("bar");
+		
 	}
 }
