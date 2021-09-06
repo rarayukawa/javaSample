@@ -18,5 +18,6 @@ public class Listsample {
 			int num = iterator.next();
 			System.out.println(num);
 		}
+		List<String> list3 = new ArrayList<>();    //ダイヤモンド演算子
 	}
 }
