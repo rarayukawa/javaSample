@@ -22,4 +22,6 @@ public class MyList {
 		//コレクション型（参照型）もOK
 		List<List<String>> list3 = new ArrayList<>();
 	}
+	
+
 }
