@@ -12,8 +12,8 @@ public class WriteFile1 {
 			return;
 		}
 		String filename = args[0];
-		try(BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-			PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(filename)));
+		try(BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+				PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(filename)))) {
 			String line;
 			while ((line = reader.readLine()) != null) {
 				writer.println(line);
