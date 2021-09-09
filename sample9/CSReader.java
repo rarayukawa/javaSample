@@ -30,7 +30,6 @@ public class CSReader {
 			for (int j = 0; j < i; j++) {
 				player[j] = players[j];
 			}
-
 			return player;
 		}
 	}
