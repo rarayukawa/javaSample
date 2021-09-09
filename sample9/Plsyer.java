@@ -1,31 +1,27 @@
 package sample9;
 
 public class Plsyer {
-	private String playerName;
+	private String name;
 	private int age;
-	private int point;
+	private long point;
 	
-//	Plsyer (String playerName, int age, int point) {
-//		setPlayerName(playerName);
-//		setAge(age);
-//		setPoint(point);
-//	}
-	public String getPlayerName() {
-		return playerName;
+	public Plsyer (String name, int age, long point) {
+		this.name = name;
+		this.age = age;
+		this.point = point;
 	}
-	public void setPlayerName(String playerName) {
-		this.playerName = playerName;
+	public String getName() {
+		return name;
 	}
 	public int getAge() {
 		return age;
 	}
-	public void setAge(int age) {
-		this.age = age;
-	}
-	public int getPoint() {
+	public long getPoint() {
 		return point;
 	}
-	public void setPoint(int point) {
-		this.point = point;
+	
+	@Override
+	public String toString() {
+		return getName() + "," + getAge() + "," + getPoint();
 	}
 }

@@ -5,9 +5,9 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class CSReader {
-	private static final String COMMA = ",";
-	
 	public Plsyer[] readAll(String fileName) throws IOException {
+		Plsyer[] players = new Plsyer[100];
+		int i = 0;
 		try(BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
 			String line;
 			boolean isNotHeaderLine = false;
@@ -19,17 +19,19 @@ public class CSReader {
 					isNotHeaderLine = true;
 					continue;
 				}
-				String[] fileElements = line.split(COMMA);
+				String[] fileElements = line.split(",");
 				if (fileElements.length != 4 || !Boolean.parseBoolean(fileElements[3])) {
 					continue;
 				}
-				Plsyer plsyer = new Plsyer();
-				plsyer.setPlayerName(fileElements[0]);
-				plsyer.setAge(Integer.parseInt(fileElements[1]));
-				plsyer.setPoint(Integer.parseInt(fileElements[2]));
-				Object[] plsyers = {plsyer.getPlayerName(), plsyer.getAge(), plsyer.getPoint()};
-				return (Plsyer[])plsyers;
+				players[i] = new Plsyer(fileElements[0], Integer.parseInt(fileElements[1]), Long.parseLong(fileElements[2]));
+				i++;
 			}
+			Plsyer[] player = new Plsyer[i];
+			for (int j = 0; j < i; j++) {
+				player[j] = players[j];
+			}
+
+			return player;
 		}
 	}
 }

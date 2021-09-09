@@ -11,7 +11,10 @@ public class MainExcecutor {
 			System.out.println(ARGUMENTS_ERROR_MESSAGE);
 			return;
 		}
-		System.out.println(new CSReader().readAll(args[0]));
+		Plsyer[] players = new CSReader().readAll(args[0]);
+		for (Plsyer p : players) {
+			System.out.println(p);
+		}
 	}
 
 }
