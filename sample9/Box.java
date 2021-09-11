@@ -1,18 +1,19 @@
 package sample9;
 
-public class Box {
-	Object o;
+public class Box<T> {
+	T o;
 	
-	public Box(Object o) {
+	public Box(T o) {
 		this.o = o;
 	}
 	
-	public Object get() {
+	public T get() {
 		return o;
 	}
+	
 	public static void main(String[] args) {
-		Box b = new Box(123);
-		Integer i = (Integer)b.get();
+		Box<Integer> b = new Box(new Integer(123));
+		Integer i = b.get();
 		System.out.println(i);
 	}
 }
