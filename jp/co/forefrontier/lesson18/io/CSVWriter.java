@@ -20,12 +20,24 @@ public class CSVWriter {
 	 */
 	public void write(List<Player> activePlayerList, boolean outputMode) throws IOException {
 		try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("/Users/yukawarara/desktop/java/output.csv")))) {
-			for(Player activePlayer : activePlayerList) {
-				if (outputMode) {
-					writer.println(activePlayer);
-				} else {
-					System.out.println(activePlayer);
+			for (int i = 0; i < activePlayerList.size(); i++){
+				String active = activePlayerList.get(i).toString();
+				int point = Integer.parseInt(active.substring(active.lastIndexOf(",")));
+				for (int j = 1; j < activePlayerList.size(); j++) {
+					String activein = activePlayerList.get(i).toString();
+					int pointin = Integer.parseInt(activein.substring(activein.lastIndexOf(",")));
+					if(point < pointin) {
+						int temporary = point;
+						point = pointin;
+						pointin = temporary;
+					}
 				}
+				if (outputMode) {
+					writer.println(activePlayerList);
+				} else {
+					System.out.println(activePlayerList);
+				}
+				
 			}
 		}
 	}

@@ -7,7 +7,7 @@ import java.io.IOException;
 public class MainExcecutor {
 	private static final String ARGUMENTS_ERROR_MESSAGE = "正しいファイルを指定してください";
 	public static void main(String[] args) throws FileNotFoundException, IOException {
-		if (args.length != 1 || !new File(args[0]).exists()) {
+		if (args.length != 2 || !new File(args[0]).exists()) {
 			System.out.println(ARGUMENTS_ERROR_MESSAGE);
 			return;
 		}
