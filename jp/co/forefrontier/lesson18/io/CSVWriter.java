@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import jp.co.forefrontier.lesson18.entity.Player;
 /**
@@ -17,9 +18,9 @@ public class CSVWriter {
 	 * @param outputMode 出力モード
 	 * @throws IOException ファイル生成時に例外が発生した場合
 	 */
-	public void write(Player[] activePlayers, boolean outputMode) throws IOException {
+	public void write(List<Player> activePlayerList, boolean outputMode) throws IOException {
 		try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("/Users/yukawarara/desktop/java/output.csv")))) {
-			for(Player activePlayer : activePlayers) {
+			for(Player activePlayer : activePlayerList) {
 				if (outputMode) {
 					writer.println(activePlayer);
 				} else {

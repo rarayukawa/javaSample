@@ -3,6 +3,8 @@ package jp.co.forefrontier.lesson18.io;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import jp.co.forefrontier.lesson18.entity.Player;
 
@@ -19,7 +21,7 @@ public class CSVReader {
      * @param fileName ファイル名
      * @throws IOException ファイル読み込み時に例外が発生した場合
      */
-    public Player[] readAll(String fileName) throws IOException {
+    public List<Player> readAll(String fileName) throws IOException {
         int countPlayer = 0;
         String line;
         boolean isNotHeaderLine = false;
@@ -39,11 +41,16 @@ public class CSVReader {
                 }
                 temporaryPlayers[countPlayer++] = new Player(fileElements[0], Integer.parseInt(fileElements[1]), Long.parseLong(fileElements[2]));
             }
-            Player[] activePlayers = new Player[countPlayer];
-            for(int i = 0; i < countPlayer; i++) {
-                activePlayers[i] = temporaryPlayers[i];
+//            Player[] activePlayers = new Player[countPlayer];
+//            for(int i = 0; i < countPlayer; i++) {
+//                activePlayers[i] = temporaryPlayers[i];
+//            }
+//            return activePlayers;
+            List<Player> activePlayerList = new ArrayList<>();
+            for (int i = 0; i < countPlayer; i++) {
+            	activePlayerList.add(temporaryPlayers[i]);
             }
-            return activePlayers;
+            return activePlayerList;
         }
     }
 }
