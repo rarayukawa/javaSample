@@ -1,6 +1,4 @@
-package jp.co.forefrontier.lesson18.entity;
-
-import jp.co.forefrontier.lesson18.io.CSVReader;
+package jp.co.f.lesson18.entity;
 
 /**
  * 選手の情報をもつクラス
@@ -10,6 +8,7 @@ public class Player {
     private String name;
     private int age;
     private long point;
+    private String teamName;
    
     /**
      * 選手の名前、年齢、得点数を初期化する
@@ -17,10 +16,14 @@ public class Player {
      * @param age 年齢
      * @param point 得点数
      */
-    public Player(String name, int age, long point) {
+    public Player(String name, int age, long point, String teamName) {
+    	private static final String F = "(";
+    	private static final String S = ")";
+    	private static final String SPEACE = " ";
         this.name = name;
         this.age = age;
         this.point = point;
+        this.teamName = teamName;
     }
     
     /**
@@ -47,12 +50,15 @@ public class Player {
         return this.point;
     }
     
+    public String getTeamName() {
+    	return this.teamName;
+    }
    /**
     * 選手情報を返す
     * @return 選手情報
     */
     @Override
     public String toString() {
-        return this.getName() + CSVReader.SPLIT_COMMA + this.getAge() + CSVReader.SPLIT_COMMA + this.getPoint();
+        return this.getTeamName() + SPEACE + String.format("%,d", this.getPoint()) + SPEACE + this.getName() + F + this.getAge() + S;
     }
 }

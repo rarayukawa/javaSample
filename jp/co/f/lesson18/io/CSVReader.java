@@ -1,4 +1,4 @@
-package jp.co.forefrontier.lesson18.io;
+package jp.co.f.lesson18.io;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import jp.co.forefrontier.lesson18.entity.Player;
+import jp.co.f.lesson18.entity.Player;
 
 /**
  * CSVファイルを読み込むクラス

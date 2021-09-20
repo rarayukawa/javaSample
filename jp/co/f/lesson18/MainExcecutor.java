@@ -1,9 +1,9 @@
-package jp.co.forefrontier.lesson18;
+package jp.co.f.lesson18;
 import java.io.File;
 import java.io.IOException;
 
-import jp.co.forefrontier.lesson18.io.CSVReader;
-import jp.co.forefrontier.lesson18.io.CSVWriter;
+import jp.co.f.lesson18.io.CSVReader;
+import jp.co.f.lesson18.io.CSVWriter;
 
 /**
  * Lesson18 課題Ver1.0を実施するクラス
